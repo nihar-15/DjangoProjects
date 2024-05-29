@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %} 
+<div id="main">
+    <div id="body-area">
+        <img src="/static/photos/tulip3.jpeg" width="500" height="500" class="mx-auto d-block" alt="Centre aligned Image"style="margin-top:0px;">
+        <br>
+        <div class="container">
+            <form class="form-signup" method="post" action='{% url 'thank' %}'>
+                 {% csrf_token %}
+                <h2 style="text-align:center">Register</h2>
+                <div class="text" style="text-align:center">
+                    <p>Dont think! Just book the tickets and be a part of this beautiful journey !! </p>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="text" name="first" placeholder="First Name" style="box-shadow: 3px 3px 5px #888888; width: 100%;">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="last" placeholder="Last Name" style="box-shadow: 3px 3px 5px #888888; width: 100%;">
+                        </div>
+                    </div>
+                </div>   
+                <br>
+                <br>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Email" style="box-shadow: 3px 3px 5px #888888; width: 100%;">
+                </div>
+
+                <br>
+                <br>
+                <div class="form-group">
+                    <input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female
+                </div>
+
+                <br>
+                <br>
+                <div class="form-group">
+                    <label for="category">Category:</label>
+                    <select name="category" id="category" class="form-control">
+                        <option value="adult">Adult</option>
+                        <option value="child">Child</option>
+                    </select>
+                </div>
+
+                <br>
+                <br>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                </div>
+            </form> 
+            <br>
+            
+            <div class="text"><p>Thanks for registering {{ fullname }}</p></div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+
+
+    
+
+ <div id="main"style="margin-top:0px;" >
+    <div id="body-area">
+     <div>
+        <h2 class="text-center">Contact Details</h2>
+        <img src="/static/photos/tulip2.jpeg" width="500" height="500" class="mx-auto d-block" alt="Centre aligned Image"style="margin-top:0px;">
+        <br>
+        <br>
+        <br>
+    
+     </div>
+         <div class="text">   <h3 style="text-align:center">Want to be a part of this beautiful heaven journey?</h3> </div>
+
+            <br>
+            <br>
+            <br>
+
+            <div class="text">    <h4 style="text-align:center">Here is the contact details to enquire about the </h4></div>
+            
+            <br>
+            <br>
+            <br>
+           
+            <div class="row">
+                <div class="col-sm-4"> <h4>Email </h4>
+                <br>
+                <br>
+                
+               <p style="text-align:center"> {% for i in email%}</p>
+                {{ i }}
+                <br>
+                <br>
+                {% endfor %}
+            </div>
+            <div class="col-sm-4"> <h4>Phone </h4>
+                <br>
+                <br>
+                
+               <p style="text-align:center"> {% for i in phno%}</p>
+                {{ i }}
+                <br>
+                <br>
+                {% endfor %}
+            </div>
+            <div class="col-sm-4"> <h4>Social Media </h4>
+                <br>
+                <br>
+              
+               <p style="text-align:left"> {% for i in email%}</p>
+                {{ i }}
+                <br>
+                <br>
+                {% endfor %}
+            </div>
+              
+
+
+        <div class="text">
+      
+        </div>  
+    </div>  
+ </div>
+
+
+
+{% endblock %}
